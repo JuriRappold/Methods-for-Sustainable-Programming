@@ -117,7 +117,7 @@ public class Lecture_02_Func_Pro {
             }
         }
         System.out.println(Arrays.toString(strings));
-        Predicate<Integer> storing_boolean_lamda = i -> i%2==0;
+        Predicate<Integer> storing_boolean_lamda = i -> i % 2 == 0;
         IntPredicate is_even = i -> i%2==0;//same thing as above, but doesn*t work w/ .filter?
         Predicate<Integer> greaterThanFive = i -> i>5;
         //generates random numbers & stores them in a List<Integer>
@@ -126,6 +126,16 @@ public class Lecture_02_Func_Pro {
         //prints only the even number
         System.out.println(integerList.stream().filter(storing_boolean_lamda).sorted().collect(Collectors.toList()));
         System.out.println(integerList.stream().filter(storing_boolean_lamda.and(greaterThanFive)).sorted().collect(Collectors.toList()));
+
+
+        var sizes = List.of("S", "M", "L"); //`var`: compiler decides variable-datatype, once decided immutable
+
+        /*
+        def __init__(self,...){
+            ...
+        }
+        constructor, actually python code?
+         */
 
     }
 }
